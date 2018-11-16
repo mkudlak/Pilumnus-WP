@@ -1,0 +1,91 @@
+//Centering and positionning
+.center-text {
+    text-align: center;
+}
+.v-align {
+    vertical-align: middle;
+}
+.inline-block {
+    display: inline-block;
+}
+.inline {
+    display: inline;
+}
+.block {
+    display: block;
+}
+@mixin relative {
+    position: relative;
+}
+@mixin absolute {
+    position: absolute;
+}
+.absolute-0000{
+    @include absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.v-align-transform {
+    @include relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.h-align-transform {
+    @include relative;
+    left: 50%;
+    transform: translateX(-50%) ;
+    -webkit-transform: translateX(-50%) ;
+    -moz-transform: translateX(-50%) ;
+    -ms-transform: translateX(-50%) ;
+    -o-transform: translateX(-50%) ;
+}
+.basic-transform {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+//DEFAULT MIXINS
+@mixin colors($bg-color, $color) {
+    background-color: $bg-color;
+    color: $color;
+}
+@mixin basic-text($size, $l-height) {
+    font-size: $size;
+    line-height: $l-height;
+}
+@mixin padding-margin($padding, $margin) {
+    padding: $padding;
+    margin: $margin;
+}
+@mixin size($w,$h) {
+    width: $w;
+    height: $h;
+}
+@mixin upper {
+    text-transform: uppercase;
+}
+@mixin pointer {
+    cursor: pointer
+}
+@mixin shadow-hover {
+    box-shadow: 0 2px 3px rbga(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.3);
+}
+//Dark OVERLAY
+@mixin dark-overlay {
+    content: "";
+    z-index: 0;
+    background: none repeat rgba(30,30,30,0.5);
+    @include absolute;
+    top: 0;
+    left: 0;
+    @include size(100%,100%);
+
+}

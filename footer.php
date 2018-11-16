@@ -24,7 +24,7 @@
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'base' ), 'base', '<a href="http://underscores.me/">Underscores.me</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'base' ), '<a href="https://symu.co/freebies/templates-4/pilumnus-psd-template-6/">Pilumnus-Themplate', '<a href="http://mkudlak.com/">Mkudlak.com 2018</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

@@ -16,13 +16,14 @@ var gulp =          require('gulp'),
 
 gulp.task('browser-sync', function() {
     browserSync.init({
-        proxy: "localhost:8888/<website>/"
+        proxy: "http://127.0.0.1:8080/wordpress/",
+        files: "**/*"
     });
 })
 
 gulp.task('sass', function() {
     return gulp.src('assets/sass/**/*.scss')
-        .pipe(sorcemaps.init())
+        .pipe(sourcemaps.init())
         .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
         .pipe(sass({ outputStyle:'compressed'}).on('error', sass.logError))
         .pipe(sourcemaps.write('./maps'))
@@ -38,7 +39,14 @@ gulp.task('watch', function() {
     gulp.watch('assets/js/**/*.js', ['js'.on("change", browserSync.reload)])
     //watch original images directory
     gulp.watch($imgSrc, ['images']).on("change", browserSync.reload);
-})
+});
+
+gulp.task('images', function() {
+    return gulp.src(imgSrc, {base: 'assets/images/originals'})
+        .pipe(newer(imgDest))
+        .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true}))
+        .pipe(gulp.dest(imgDest));
+});
 
 var jsInput = { js: 'assets/js/dev/**/*.js' }
 var jsOutput = 'assets/js/dist/';

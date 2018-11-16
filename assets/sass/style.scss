@@ -1,0 +1,63 @@
+/*Import global modules parts*/
+@import 'modules/base.scss';
+@import 'modules/bootstrap-grid.scss';
+@import 'modules/bootstrap-reboot.scss';
+@import 'modules/bootstrap.scss';
+@import 'modules/mixins.scss';
+@import 'modules/reset.scss';
+@import 'modules/variables.scss';
+/*Import specific partial parts*/
+@import 'partials/header.scss';
+@import 'partials/about.scss';
+@import 'partials/articles.scss';
+@import 'partials/gallery.scss';
+@import 'partials/contact.scss';
+
+/*Font Import*/
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Playfair+Display:400,700|Raleway:300,400,700,800');
+
+body {
+    background-image: url('./assets/images/originals/body-background.png');
+    width: 100%;
+}
+h1 {
+    font-size: 2rem;
+    color: $text-heading-color;
+}
+.btn-gold {
+    @include upper;
+    @include basic-text(1rem,$base-line-height);
+    border: 1px solid $gold-light;
+    font-family: $font-base;
+    font-weight: bolder;
+    background-color: $medium-grey;
+    color: $gold-light;
+    width: 180px;
+    height: 57px;
+}
+
+//Media Queries
+/* Desktop specific */
+@media (max-width: 979px){
+
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
