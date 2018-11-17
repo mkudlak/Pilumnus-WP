@@ -20,7 +20,6 @@ gulp.task('browser-sync', function() {
         files: "**/*"
     });
 })
-
 gulp.task('sass', function() {
     return gulp.src('assets/sass/**/*.scss')
         .pipe(sourcemaps.init())

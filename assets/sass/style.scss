@@ -16,9 +16,13 @@
 /*Font Import*/
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Playfair+Display:400,700|Raleway:300,400,700,800');
 
+html {
+    
+}
 body {
-    background-image: url('./assets/images/originals/body-background.png');
-    width: 100%;
+    background: url('./assets/images/originals/body-background.png') no-repeat center center;
+    background-size: cover;
+    height: 5503px; ;
 }
 h1 {
     font-size: 2rem;
@@ -33,7 +37,12 @@ h1 {
     background-color: $medium-grey;
     color: $gold-light;
     width: 180px;
-    height: 57px;
+    padding: 20px 40px 24px 40px;
+    &:hover {
+        background-color: $gold-light;
+        color: $medium-grey;
+        @include basic-transform;
+    }
 }
 
 //Media Queries
