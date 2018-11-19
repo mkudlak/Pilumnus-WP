@@ -1,0 +1,39 @@
+.contact {
+  height: 658px;
+  width: 1302px;
+  margin: 0 auto;
+  position: relative;
+  .contact-image {
+    position: absolute;
+    top: -50px;
+    left: 68px;
+    width: 588px;
+    height: 658px;
+    background-image: url('./assets/images/originals/con-1.png');
+    @include shadow-hover;
+  }
+  .col-md-6:last-child {
+    padding: 60px;
+  }
+  .form-control {
+    font-family: Raleway, sans-serif;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
+  label {
+    color: rgba(255, 255, 255, 0.3);
+    font-family: Raleway;
+    margin-top: 50px;
+  }
+  .btn {
+    margin-top: 50px;
+  }
+
+}

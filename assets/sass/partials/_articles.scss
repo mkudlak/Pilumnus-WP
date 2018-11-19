@@ -1,0 +1,60 @@
+.articles {
+  .container-fluid {
+    width: 1437px;
+    margin: 0 auto;
+    .col-md-4 {
+      padding: 0 50px;
+    }
+    .art-background {
+      width: 338px;
+      height: 236px;
+      background-color: $medium-grey;
+      position: relative;
+      margin-bottom: 70px;
+    }
+    .art {
+      width: 338px;
+      height: 236px;
+      @include absolute;
+      left: 30px;
+      top: 30px;
+      overflow: hidden;
+      &:hover .art-image-1 {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        @include basic-transform;
+        cursor: pointer;
+      }
+    }
+    .col-md-4:nth-child(even) {
+      margin-top: 86px;
+    }
+    .art-image-1 {
+      background: url('./assets/images/originals/art-1.png');
+    }
+    .art-image-2 {
+      background: url('./assets/images/originals/art-2.png');
+    }
+    .art-image-3 {
+      background: url('./assets/images/originals/art-3.png');
+    }
+  }
+  .btn-gold {
+    border: none;
+    box-shadow: none;
+    text-align: left;
+    padding: 10px 20px 10px 0;
+    &:hover {
+      background-color: transparent;
+      color: $gold-dark;
+    }
+  }
+  button > .fa {
+    color: $gold-dark;
+    font-size: 20px;
+    margin-left: 10px;
+  }
+}

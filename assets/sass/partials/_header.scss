@@ -1,1 +1,28 @@
 
+.header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .header-border{
+    border: 10px solid $gold-dark;
+    padding: 100px 200px;
+  }
+  .border-under {
+    color: white;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 185px;
+    font-weight: 400;
+    color: white;
+  }
+  p {
+    font-size: 24px;
+    line-height: 50px;
+    font-weight: 700;
+  }
+  p:last-child {
+    color: $gold-dark;
+  }
+}

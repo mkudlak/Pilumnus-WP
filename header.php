@@ -16,7 +16,11 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet' typ='text/css'>
+    
 	<?php wp_head(); ?>
 </head>
 
@@ -25,25 +29,6 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'base' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$base_description = get_bloginfo( 'description', 'display' );
-			if ( $base_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $base_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'base' ); ?></button>
 			<?php

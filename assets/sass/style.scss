@@ -12,43 +12,103 @@
 @import 'partials/articles.scss';
 @import 'partials/gallery.scss';
 @import 'partials/contact.scss';
+@import 'partials/follow.scss';
 
 /*Font Import*/
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Playfair+Display:400,700|Raleway:300,400,700,800');
 
-html {
-    
-}
+/*Main SCSS*/
 body {
-    background: url('./assets/images/originals/body-background.png') no-repeat center center;
+    background-color: $dark-grey;
+    color: $text-main-color;
+}
+#page {
+    background-image: url('./assets/images/originals/body-background.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
-    height: 5503px; ;
 }
 h1 {
     font-size: 2rem;
     color: $text-heading-color;
 }
-.btn-gold {
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+h1, h2 {
+    @include text-shadow;
+}
+h2 {
+    font-size: 60px;
+    color: $gold-dark;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: $gold-dark;
+}
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+}
+.material-icons {
+    color: $gold-dark;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.padding-margin {
+    margin-bottom: 200px;
+}
+.rectangle {
+    height: 558px;
+    width: 1302px;
+    background-color: $medium-grey;
+    @include shadow-hover;
+}
+.img, .btn {
+    @include shadow-hover;
+}
+.btn-gold, button {
     @include upper;
     @include basic-text(1rem,$base-line-height);
-    border: 1px solid $gold-light;
+    border: 1px solid #6b4922;;
     font-family: $font-base;
     font-weight: bolder;
-    background-color: $medium-grey;
+    background-color: transparent;
     color: $gold-light;
-    width: 180px;
-    padding: 20px 40px 24px 40px;
+    padding: 20px 46px;
     &:hover {
         background-color: $gold-light;
         color: $medium-grey;
+        border-color: $gold-dark;
         @include basic-transform;
     }
 }
+.site-footer {
+    text-align: center;
+    font-family: Raleway, sans-serif;
+    letter-spacing: 2px;
+    height: 80px;
+    background-color: $dark-grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        color: $gold-dark;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+
 
 //Media Queries
 /* Desktop specific */
 @media (max-width: 979px){
-
+    body {
+        color: red;
+    }
 }
 
 /* Large desktop */

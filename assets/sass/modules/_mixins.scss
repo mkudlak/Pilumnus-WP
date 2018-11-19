@@ -1,8 +1,9 @@
+@import 'variables';
 //Centering and positionning
 .center-text {
     text-align: center;
 }
-.v-align {
+@mixin v-align {
     vertical-align: middle;
 }
 .inline-block {
@@ -61,10 +62,6 @@
     font-size: $size;
     line-height: $l-height;
 }
-@mixin padding-margin($padding, $margin) {
-    padding: $padding;
-    margin: $margin;
-}
 @mixin size($w,$h) {
     width: $w;
     height: $h;
@@ -76,7 +73,10 @@
     cursor: pointer
 }
 @mixin shadow-hover {
-    box-shadow: 0 2px 3px rbga(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.3);
+    box-shadow: 25px 17px 39px 6px rgba(0,0,0,0.5);
+}
+@mixin text-shadow {
+   text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
 }
 //Dark OVERLAY
 @mixin dark-overlay {
@@ -87,5 +87,9 @@
     top: 0;
     left: 0;
     @include size(100%,100%);
-
+}
+.border-under {
+    border-bottom: 3px solid $gold-dark;
+    width: 91px;
+    margin-bottom: 45px;
 }

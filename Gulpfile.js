@@ -35,7 +35,7 @@ gulp.task('watch', function() {
     gulp.watch('assets/sass/*.scss', ['sass']).on("change", browserSync.reload);
     gulp.watch('assets/sass/**/*.scss', ['sass']).on("change", browserSync.reload);
     //watch js directory
-    gulp.watch('assets/js/**/*.js', ['js'.on("change", browserSync.reload)])
+    gulp.watch('assets/js/*.js', ['js'.on("change", browserSync.reload)])
     //watch original images directory
     gulp.watch($imgSrc, ['images']).on("change", browserSync.reload);
 });
@@ -47,14 +47,14 @@ gulp.task('images', function() {
         .pipe(gulp.dest(imgDest));
 });
 
-var jsInput = { js: 'assets/js/dev/**/*.js' }
+var jsInput = { js: 'assets/js/dev/*.js' }
 var jsOutput = 'assets/js/dist/';
 
 gulp.task('js', function(){
-    return gulp.src(jsInput.js)
+    return gulp.src('assets/js/dev/*.js')
         .pipe(concat('app.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('./assets/js/dist/'))
+        .pipe(gulp.dest('assets/js/dist/'))
 });
 
 gulp.task('default', ['sass', 'browser-sync', 'watch', 'images', 'js']);
