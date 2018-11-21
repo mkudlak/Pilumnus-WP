@@ -15,132 +15,111 @@
 get_header();
 ?>
 <!-- Section Header-->
-<section class="header padding-margin">
-    <div class="container center-text v-align">
-        <div class="header-border">
-            <p class="text-uppercase">Lorem Ipsum</p>
-            <div class="border-under"></div>
-            <h1>Travel</h1>
-            <p class="text-uppercase">The inspirational adventures around the world</p>
-        </div>
-        <div class="border-hide"></div>
+<div class="header">
+    <div class="header-border">
+        <p>Lorem Ipsum</p>
+        <div class="border-under"></div>
+        <h1>Travel</h1>
+        <p>The inspirational adventure around the world</p>
     </div>
-</section>
+</div>
 <!-- Section About-->
 <section class="about padding-margin">
-    <div class="container-fluid">
-        <div class="rectangle">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>About me</h2>
-                    <div class="border-under"></div>
-                    <p>Ex nisi dolore et nostrud velit. Aliquip mollit incididunt cillum qui cillum occaecat cillum qui excepteur enim excepteur deserunt ex ullamco. In dolore nisi magna id. Ea incididunt esse ipsum ut proident anim mollit reprehenderit ad enim Lorem veniam.</p>
-                    <br>
-                    <p>Incididunt labore cillum sunt duis quis laborum ullamco mollit mollit. Anim Lorem in excepteur laborum nostrud officia anim laborum pariatur do incididunt ad irure.</p>
-                    <button type="button" class="btn btn-gold">Read More</button>
-                </div>
-                <div class="col-md-6">
-                    <div class="about-image img">
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="rectangle"></div>
+    <div class="about-info">
+        <h2>About me</h2>
+        <div class="border-under"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. </p>
+        <br>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident. </p>
+        <button type="button" class="btn btn-gold">Read More</button>
+    </div>
+    <div class="about-image img">
     </div>
 </section>
 <!-- Section Articles-->
 <section class="articles padding-margin">
-    <div class="container">
+    <div class="art-title">
         <h2>Latest articles</h2>
         <div class="border-under"></div>
     </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="art-background img">
-                    <div class="art art-image-1 img"></div>
-                </div>
-                <div class="art-info">
-                    <h3>Lorem Ipsum Dolor</h3>
-                    <div class="border-under"></div>
-                    <br>
-                    <p>Qui consectetur consectetur qui aliqua pariatur qui velit occaecat mollit laborum. Duis do Lorem excepteur reprehenderit cupidatat deserunt. Cillum non consequat dolor in commodo voluptate est est proident reprehenderit culpa.</p>
-                    <br>
-                    <button type="button" class="btn btn-gold">Read More<i class="fa fa-angle-right"></i></button>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="art-background img">
-                    <div class="art art-image-2 img"></div>
-                </div>
-                <h3>Lorem Ipsum Dolor</h3>
-                <div class="border-under"></div>
-                <br>
-                <p>Qui consectetur consectetur qui aliqua pariatur qui velit occaecat mollit laborum. Duis do Lorem excepteur reprehenderit cupidatat deserunt. Cillum non consequat dolor in commodo voluptate est est proident reprehenderit culpa. </p>
-                <br>
-                <button type="button" class="btn btn-gold">Read More<i class="fa fa-angle-right"></i></button>
-            </div>
-            <div class="col-md-4">
-                <div class="art-background img">
-                    <div class="art art-image-3 img"></div>
-                </div>
-                <h3>Lorem Ipsum Dolor</h3>
-                <div class="border-under"></div>
-                <br>
-                <p>Qui consectetur consectetur qui aliqua pariatur qui velit occaecat mollit laborum. Duis do Lorem excepteur reprehenderit cupidatat deserunt. Cillum non consequat dolor in commodo voluptate est est proident reprehenderit culpa.</p>
-                <br>
-                <button type="button" class="btn btn-gold">Read More<i class="fa fa-angle-right"></i></button>
-            </div>
+    <div class="articles-container">
+        <div class="art-image-1 art"></div>
+        <div class="art-background-1 img"></div>
+        <div class="art-info-1">
+            <h3>Lorem Ipsum Dolor</h3>
+            <div class="border-under"></div>
+            <p>Qui consectetur consectetur qui aliqua pariatur qui velit occaecat mollit laborum. Duis do Lorem
+                excepteur reprehenderit cupidatat deserunt. Cillum non consequat dolor in commodo voluptate est est
+                proident reprehenderit culpa.</p>
+            <br>
+            <button type="button" class="btn btn-gold">Read More<i class="fa fa-angle-right"></i></button>
+        </div>
+        <div class="art-image-2 art"></div>
+        <div class="art-background-2 img"></div>
+        <div class="art-info-2">
+            <h3>Lorem Ipsum Dolor</h3>
+            <div class="border-under"></div>
+            <p>Qui consectetur consectetur qui aliqua pariatur qui velit occaecat mollit laborum. Duis do Lorem
+                excepteur reprehenderit cupidatat deserunt. Cillum non consequat dolor in commodo voluptate est est
+                proident reprehenderit culpa. </p>
+            <br>
+            <button type="button" class="btn btn-gold">Read More<i class="fa fa-angle-right"></i></button>
+        </div>
+        <div class="art-image-3 art"></div>
+        <div class="art-background-3 img"></div>
+        <div class="art-info-3">
+            <h3>Lorem Ipsum Dolor</h3>
+            <div class="border-under"></div>
+            <p>Qui consectetur consectetur qui aliqua pariatur qui velit occaecat mollit laborum. Duis do Lorem
+                excepteur reprehenderit cupidatat deserunt. Cillum non consequat dolor in commodo voluptate est est
+                proident reprehenderit culpa. </p>
+            <br>
+            <button type="button" class="btn btn-gold">Read More<i class="fa fa-angle-right"></i></button>
         </div>
     </div>
 </section>
 <!-- Section Gallery-->
 <section class="gallery padding-margin">
-    <div class="container">
+    <div class="gallery-title">
         <h2>Gallery</h1>
         <div class="border-under"></div>
     </div>
-    <div class="container-fluid">
-        <div class="grid-container">
-            <div class="img-1 img"></div>
-            <div class="img-2 img"></div>
-            <div class="img-3 img"></div>
-            <div class="img-4 img"></div>
-            <div class="img-5 img"></div>
-            <div class="img-6 img"></div>
-            <div class="img-7 img"></div>
-        </div>
-        <br>
-        <button type="button" class="btn btn-gold">Show More</button>
+    <div class="grid-container">
+        <div class="img-1 img"></div>
+        <div class="img-2 img"></div>
+        <div class="img-3 img"></div>
+        <div class="img-4 img"></div>
+        <div class="img-5 img"></div>
+        <div class="img-6 img"></div>
+        <div class="img-7 img"></div>
     </div>
+    <br>
+    <button type="button" class="btn btn-gold">Show More</button>
 </section>
 <!-- Section Contact-->
 <section class="contact padding-margin">
-    <div class="container-fluid">
-        <div class="rectangle">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="contact-image">
-                    </div>
+    <div class="rectangle"></div>
+    <div class="contact-image"></div>
+    <div class="contact-info">
+        <h2>Contact</h2>
+        <div class="border-under"></div>
+        <form>
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Your name">
                 </div>
-                <div class="col-md-6">
-                    <h2>Contact</h2>
-                    <div class="border-under"></div>
-                    <form>
-                        <div class="form-row">
-                            <div class="col">
-                            <input type="text" class="form-control" placeholder="Your name">
-                            </div>
-                            <div class="col">
-                            <input type="text" class="form-control" placeholder="Your email">
-                            </div>
-                        </div>
-                        <label for="exampleFormControlTextarea1">Message</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </form>
-                    <button type="button" class="btn btn-gold">Send Message</button>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Your email">
                 </div>
             </div>
-        </div>
+            <label for="exampleFormControlTextarea1">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </form>
+        <button type="button" class="btn btn-gold">Send Message</button>
     </div>
 </section>
 <!-- Section Footer Follow-->
@@ -173,6 +152,6 @@ get_header();
         </div>
     </div>
 </section>
-<script type='text/javascript' src='../../animations.js'></script>
+
 <?php
 get_footer();

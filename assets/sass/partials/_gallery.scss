@@ -1,68 +1,74 @@
 .gallery {
-  .container-fluid {
-    .grid-container {
-      height: 1120px;
-      width: 1500px;
-      justify-content: center;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 442px 370px 370px;
-      grid-template-rows: 349px 349px 204px;
-      grid-template-areas: "img-1 img-2 img-3" "img-4 img-5 img-5" "img-4 img-6 img-7";
-      grid-gap: 30px;
-    }
-    .img-1 {
-      margin-left: 72px;
-      margin-top: 70px;
-      grid-area: img-1;
-      background-image: url("./assets/images/originals/img-1.png");
-      background-size: cover;
-      width: 370px;
-      height: 349px;
-    }
-    .img-2 {
-      grid-area: img-2;
-      background-image: url("./assets/images/originals/img-2.png");
-      background-size: cover;
-    }
-    .img-3 {
-      grid-area: img-3;
-      background-image: url("./assets/images/originals/img-3.png");
-      background-size: cover;
-      height: 204px;
-      align-self: end;
-    }
-    .img-4 {
-      margin-top: 70px;
-      grid-area: img-4;
-      background-image: url("./assets/images/originals/img-4.png");
-      background-size: cover;
-      width: 442px;
-      height: 558px;
-    }
-
-    .img-5 {
-      grid-area: img-5;
-      background-image: url("./assets/images/originals/img-5.png");
-      background-size: cover;
-      width: 853px;
-      height: 349px;
-    }
-    .img-6 {
-      grid-area: img-6;
-      background-image: url("./assets/images/originals/img-6.png");
-      background-size: cover;
-      width: 370px;
-      height: 349px;
-    }
-    .img-7 {
-      grid-area: img-7;
-      background-image: url("./assets/images/originals/img-7.png");
-      background-size: cover;
-      width: 370px;
-      height: 204px;
-    }
+  .gallery-title {
+    margin-left: 400px;
   }
+  .grid-container {
+    justify-content: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 442px 370px 370px;
+    grid-template-rows: 349px 349px 204px;
+    grid-template-areas: "img-1 img-2 img-3""img-4 img-5 img-5""img-4 img-6 img-7";
+    grid-gap: 30px;
+  }
+
+  .img-1 {
+    margin-left: 72px;
+    margin-top: 70px;
+    grid-area: img-1;
+    background-image: url("./assets/images/originals/img-1.png");
+    background-size: cover;
+    width: 370px;
+    height: 349px;
+  }
+
+  .img-2 {
+    grid-area: img-2;
+    background-image: url("./assets/images/originals/img-2.png");
+    background-size: cover;
+  }
+
+  .img-3 {
+    grid-area: img-3;
+    background-image: url("./assets/images/originals/img-3.png");
+    background-size: cover;
+    height: 204px;
+    align-self: end;
+  }
+
+  .img-4 {
+    margin-top: 70px;
+    grid-area: img-4;
+    background-image: url("./assets/images/originals/img-4.png");
+    background-size: cover;
+    width: 442px;
+    height: 558px;
+  }
+
+  .img-5 {
+    grid-area: img-5;
+    background-image: url("./assets/images/originals/img-5.png");
+    background-size: cover;
+    width: 853px;
+    height: 349px;
+  }
+
+  .img-6 {
+    grid-area: img-6;
+    background-image: url("./assets/images/originals/img-6.png");
+    background-size: cover;
+    width: 370px;
+    height: 349px;
+  }
+
+  .img-7 {
+    grid-area: img-7;
+    background-image: url("./assets/images/originals/img-7.png");
+    background-size: cover;
+    width: 370px;
+    height: 204px;
+  }
+
   .btn {
     margin-top: 113px;
     display: block;

@@ -1,28 +1,35 @@
 
 .header {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .header-border{
-    border: 10px solid $gold-dark;
-    padding: 100px 200px;
-  }
-  .border-under {
-    color: white;
-    margin: 0 auto;
-  }
-  h1 {
-    font-size: 185px;
-    font-weight: 400;
-    color: white;
-  }
-  p {
-    font-size: 24px;
-    line-height: 50px;
-    font-weight: 700;
-  }
-  p:last-child {
-    color: $gold-dark;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template-rows: 0.5fr 2fr 0.5fr;
+  grid-template-areas: ". . ." ". header-border ." ". . .";
+  .header-border {
+    grid-area: header-border;
+    margin: auto;
+    border: 0.625rem solid $gold-dark;
+    padding: 5rem 15rem 6.25rem 15rem;
+    p {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .border-under {
+      border-bottom-color: white;
+      margin: auto;
+    }
+    h1 {
+      color: white;
+      font-size: 11.5rem;
+      font-weight: 400;
+
+    }
+    p:last-child {
+      margin-top: 1.25rem;
+      color: $gold-dark;
+    }
   }
 }

@@ -1,45 +1,85 @@
 .articles {
-  .container-fluid {
-    width: 1437px;
-    margin: 0 auto;
-    .col-md-4 {
-      padding: 0 50px;
-    }
-    .art-background {
-      width: 338px;
-      height: 236px;
-      background-color: $medium-grey;
-      position: relative;
-      margin-bottom: 70px;
-    }
-    .art {
-      width: 338px;
-      height: 236px;
-      @include absolute;
-      left: 30px;
-      top: 30px;
-      overflow: hidden;
-      &:hover .art-image-1 {
-        transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-        -moz-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        -o-transform: scale(1.1);
-        @include basic-transform;
-        cursor: pointer;
-      }
-    }
-    .col-md-4:nth-child(even) {
-      margin-top: 86px;
-    }
-    .art-image-1 {
-      background: url('./assets/images/originals/art-1.png');
-    }
-    .art-image-2 {
-      background: url('./assets/images/originals/art-2.png');
-    }
-    .art-image-3 {
-      background: url('./assets/images/originals/art-3.png');
+  display: grid;
+  grid-template-columns: 0.5fr 0.25fr 1.5fr 0.25fr 1.5fr 0.2fr 0.5fr;
+  grid-template-rows: 0.25fr 2fr 0.25fr;
+  grid-template-areas: ". art-title art-title art-title art-title art-title ."". articles-container articles-container articles-container articles-container articles-container ."". . . . . . .";
+
+  .articles-container {
+    display: grid;
+    grid-template-columns: 0.1fr 2fr 0.1fr 0.25fr 0.1fr 2fr 0.1fr 0.25fr 0.1fr 2fr 0.1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr 1fr 0.1fr 0.1fr 1fr 0.5fr;
+    grid-area: articles-container;
+  }
+
+  .art-image-1 {
+    grid-area: 2 / 2 / 4 / 4;
+    background: url('./assets/images/originals/art-1.png');
+  }
+
+  .art-background-1 {
+    grid-area: 1 / 1 / 3 / 3;
+    background-color: $medium-grey;
+    z-index: -1;
+  }
+
+  .art-info-1 {
+    margin-top: 50px;
+    grid-area: 4 / 1 / 9 / 4;
+  }
+
+  .art-image-2 {
+    grid-area: 4 / 6 / 6 / 8;
+    background: url('./assets/images/originals/art-2.png');
+  }
+
+  .art-background-2 {
+    grid-area: 3 / 5 / 5/ 7;
+    background-color: $medium-grey;
+    z-index: -1;
+  }
+
+  .art-info-2 {
+    margin-top: 50px;
+    grid-area: 7 / 5 / 9 / 8;
+  }
+
+  .art-image-3 {
+    grid-area: 2 / 10 / 4 / 12;
+    background: url('./assets/images/originals/art-3.png');
+  }
+
+  .art-background-3 {
+    grid-area: 1 / 9 / 3 / 12;
+    background-color: $medium-grey;
+    z-index: -1;
+  }
+
+  .art-info-3 {
+    margin-top: 50px;
+    grid-area: 4 / 9 / 9 / 12;
+  }
+
+  .art-title {
+    grid-area: art-title;
+    margin: auto;
+  }
+
+  .art-background {
+    background-color: $medium-grey;
+  }
+
+  .art {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &:hover {
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      @include basic-transform;
+      cursor: pointer;
     }
   }
   .btn-gold {
@@ -47,12 +87,14 @@
     box-shadow: none;
     text-align: left;
     padding: 10px 20px 10px 0;
+
     &:hover {
       background-color: transparent;
       color: $gold-dark;
     }
   }
-  button > .fa {
+
+  button>.fa {
     color: $gold-dark;
     font-size: 20px;
     margin-left: 10px;

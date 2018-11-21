@@ -1,20 +1,26 @@
 .contact {
-  height: 658px;
-  width: 1302px;
-  margin: 0 auto;
-  position: relative;
+  margin-top: 200px;
+  display: grid;
+  grid-template-columns: 0.5fr 0.2fr 1.5fr 0.25fr 1.5fr 0.2fr 0.5fr;
+  grid-template-rows: 0.25fr 2fr 0.25fr;
+  .rectangle {
+    grid-area: 2 / 2 / 3 / 7;
+    z-index: -1;
+  }
   .contact-image {
-    position: absolute;
-    top: -50px;
-    left: 68px;
-    width: 588px;
-    height: 658px;
+    grid-area: 1 / 3 / 4 / 4;
     background-image: url('./assets/images/originals/con-1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     @include shadow-hover;
   }
-  .col-md-6:last-child {
-    padding: 60px;
+
+  .contact-info {
+    grid-area: 1 / 5 / 4 / 6;
+    padding:100px 0;
   }
+
   .form-control {
     font-family: Raleway, sans-serif;
     background-color: transparent;
@@ -27,6 +33,13 @@
     -ms-border-radius: 0;
     -o-border-radius: 0;
   }
+  .col{
+    display: inline;
+  }
+  .col:last-child {
+    margin-left: 50px;
+  }
+
   label {
     color: rgba(255, 255, 255, 0.3);
     font-family: Raleway;
@@ -35,5 +48,4 @@
   .btn {
     margin-top: 50px;
   }
-
 }

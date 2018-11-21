@@ -1,21 +1,24 @@
 .about {
-  height: 658px;
-  width: 1302px;
-  margin: 0 auto;
-  position: relative;
-  .col-md-6:first-child{
-    padding: 50px;
-  }
-  .about-image {
-    position: absolute;
-    top: -50px;
-    right: 68px;
-    background: url('./assets/images/originals/about-image.png');
-    width: 588px;
-    height: 658px;
-  }
-  .btn {
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
+  display: grid;
+  grid-template-columns: 0.5fr 0.2fr 1.5fr 0.25fr 1.5fr 0.2fr 0.5fr;
+  grid-template-rows: 0.25fr 2fr 0.25fr;
+    .rectangle {
+      grid-area: 2 / 2 / 3 / 7;
+      z-index: -1;
+    }
+    .about-info {
+      grid-area: 2 / 3 / 3 / 4;
+      padding: 60px 60px 60px 0;
+    }
+    .about-image {
+      grid-area: 1 / 5 / 4 / 6;
+      background: url('./assets/images/originals/about-image.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .btn {
+      margin-top: 50px;
+      margin-bottom: 30px
+    }
 }

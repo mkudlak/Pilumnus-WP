@@ -1,8 +1,5 @@
 /*Import global modules parts*/
 @import 'modules/base.scss';
-@import 'modules/bootstrap-grid.scss';
-@import 'modules/bootstrap-reboot.scss';
-@import 'modules/bootstrap.scss';
 @import 'modules/mixins.scss';
 @import 'modules/reset.scss';
 @import 'modules/variables.scss';
@@ -22,7 +19,7 @@ body {
     background-color: $dark-grey;
     color: $text-main-color;
 }
-#page {
+body {
     background-image: url('./assets/images/originals/body-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,11 +54,9 @@ p {
     margin-left: 10px;
 }
 .padding-margin {
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 .rectangle {
-    height: 558px;
-    width: 1302px;
     background-color: $medium-grey;
     @include shadow-hover;
 }
@@ -78,6 +73,7 @@ p {
     color: $gold-light;
     padding: 20px 46px;
     &:hover {
+        cursor: pointer;
         background-color: $gold-light;
         color: $medium-grey;
         border-color: $gold-dark;
@@ -86,9 +82,9 @@ p {
 }
 .site-footer {
     text-align: center;
+    height: 150px;
     font-family: Raleway, sans-serif;
     letter-spacing: 2px;
-    height: 80px;
     background-color: $dark-grey;
     display: flex;
     justify-content: center;
@@ -101,32 +97,54 @@ p {
     }
 }
 
-
+//////////
+///GRID CSS
 
 //Media Queries
-/* Desktop specific */
-@media (max-width: 979px){
-    body {
-        color: red;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .header {
+        .header-border {
+            border: 5px solid $gold-dark;
+            padding: 10px 40px;
+            h1 {
+                font-size: 50px;
+            }
+            p {
+                font-size: 8px;
+                line-height: 15px;
+            }
+            .border-under {
+                border-bottom: 1px solid white;
+            };
+        }
     }
 }
 
-/* Large desktop */
-@media (min-width: 1200px) {
-
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    h1 {
+        color:yellow;
+    }
 }
 
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    h1 {
+        color: green;
+    }
 }
 
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
-
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    h1 {
+        color: blue;
+    }
 }
 
-/* Landscape phones and down */
-@media (max-width: 480px) {
-
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    h1 {
+        color: red;
+    }
 }
