@@ -19,59 +19,78 @@ body {
     background-color: $dark-grey;
     color: $text-main-color;
 }
+
 body {
     background-image: url('./assets/images/originals/body-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 h1 {
     font-size: 2rem;
     color: $text-heading-color;
 }
-h1, h2, h3 {
+
+h1,
+h2,
+h3 {
     font-family: 'Playfair Display', serif;
 }
-h1, h2 {
+
+h1,
+h2 {
     @include text-shadow;
 }
+
 h2 {
     font-size: 60px;
     color: $gold-dark;
 }
+
 h3 {
     font-size: 20px;
     font-weight: 400;
     color: $gold-dark;
 }
+
 p {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     line-height: 28px;
 }
+
 .material-icons {
     color: $gold-dark;
     font-size: 20px;
     margin-left: 10px;
 }
+
 .padding-margin {
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
+
 .rectangle {
     background-color: $medium-grey;
     @include shadow-hover;
 }
-.img, .btn {
+
+.img,
+.btn {
     @include shadow-hover;
 }
-.btn-gold, button {
+
+.btn-gold,
+button {
     @include upper;
-    @include basic-text(1rem,$base-line-height);
-    border: 1px solid #6b4922;;
+    @include basic-text(1rem, $base-line-height);
+    border: 1px solid #6b4922;
+    ;
     font-family: $font-base;
     font-weight: bolder;
     background-color: transparent;
     color: $gold-light;
     padding: 20px 46px;
+
     &:hover {
         cursor: pointer;
         background-color: $gold-light;
@@ -80,6 +99,7 @@ p {
         @include basic-transform;
     }
 }
+
 .site-footer {
     text-align: center;
     height: 150px;
@@ -89,62 +109,225 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+
     a {
         color: $gold-dark;
+
         &:hover {
             text-decoration: none;
         }
     }
 }
 
-//////////
-///GRID CSS
 
-//Media Queries
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+
+/*MEDIA QUERIES*/
+/* Small devices, phones less than 767px) */
+@media (max-width: 767px) {
+    .padding-margin {
+        margin-bottom: 20px;
+    }
+
     .header {
         .header-border {
-            border: 5px solid $gold-dark;
-            padding: 10px 40px;
+            padding: 1.5rem 3rem;
+            border: 0.3rem solid $gold-dark;
+
             h1 {
-                font-size: 50px;
+                font-size: 2rem;
             }
+
             p {
-                font-size: 8px;
-                line-height: 15px;
+                font-size: 1rem;
             }
+        }
+    }
+
+    .about {
+        display: block;
+
+        .about-info {
+            padding: 50px;
+            background-color: $medium-grey;
+        }
+    }
+
+    .articles {
+        display: block;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 100px;
+
+        .articles-container {
+            display: block;
+
+            .art-background-1,
+            .art-background-2,
+            .art-background-3 {
+                visibility: hidden;
+            }
+
+            .art-image-1,
+            .art-image-2,
+            .art-image-3 {
+                display: block;
+                height: 236px;
+                width: 280px;
+                margin: auto;
+            }
+
+            .art-info-1 {
+                margin-bottom: 50px
+            }
+        }
+    }
+
+    .gallery {
+        display: block;
+
+        .gallery-title {
+            margin: auto;
+            text-align: center;
+            margin-bottom: 40px;
+
             .border-under {
-                border-bottom: 1px solid white;
-            };
+                margin: auto;
+            }
+        }
+
+        .grid-container {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            .img-1,
+            .img-2,
+            .img-3,
+            .img-4,
+            .img-5,
+            .img-6,
+            .img-7 {
+                height: 370px;
+                width: 442px;
+                margin: auto;
+            }
+
+            .img-1 {
+                margin: 0;
+                margin: auto;
+            }
+        }
+    }
+
+    .contact {
+        display: block;
+
+        .contact-image {
+            margin: auto;
+            width: 294px;
+            height: 329px;
+        }
+
+        .contact-info {
+            padding: 50px 100px;
+
+            .col:last-child {
+                margin-left: 0;
+            }
         }
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    h1 {
-        color:yellow;
-    }
-}
+/*Device, tablets */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .header {
+        .header-border {
+            padding: 3rem 7rem;
+            border: 0.3rem solid $gold-dark;
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    h1 {
-        color: green;
+            h1 {
+                font-size: 4rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
     }
+
+    .about {
+        grid-template-rows: 0.25fr 1fr 1fr 0.25fr;
+
+        .rectangle {
+            grid-area: 2 / 2 / 4 / 7;
+        }
+
+        .about-info {
+            grid-area: 2 / 3 / 3 / 6
+        }
+
+        .about-image {
+            grid-area: 3 / 3 / 5 / 6;
+        }
+    }
+
+    .articles {
+        display: block;
+        width: 80%;
+        margin: auto;
+
+        .articles-container {
+            display: block;
+
+            .art-background-1,
+            .art-background-2,
+            .art-background-3 {
+                visibility: hidden;
+            }
+
+            .art-image-1,
+            .art-image-2,
+            .art-image-3 {
+                display: block;
+                height: 236px;
+                width: 328px;
+                margin: auto;
+            }
+
+            .art-info-1 {
+                margin-bottom: 50px
+            }
+        }
+    }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    h1 {
-        color: blue;
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .header {
+        .header-border {
+            padding: 5rem 7rem;
+            border: 0.3rem solid $gold-dark;
+
+            h1 {
+                font-size: 8rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
     }
+
+    .about {
+        .about-image {
+            grid-area: 1 / 4 / 4 / 7;
+        }
+    }
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    h1 {
-        color: red;
-    }
+@media screen and (min-width: 1200px) {
+
 }

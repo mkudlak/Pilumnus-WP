@@ -1,6 +1,6 @@
 .about {
   display: grid;
-  grid-template-columns: 0.5fr 0.2fr 1.5fr 0.25fr 1.5fr 0.2fr 0.5fr;
+  grid-template-columns: 0.2fr 0.2fr 1.5fr 0.25fr 1.5fr 0.2fr 0.2fr;
   grid-template-rows: 0.25fr 2fr 0.25fr;
     .rectangle {
       grid-area: 2 / 2 / 3 / 7;
@@ -13,9 +13,9 @@
     .about-image {
       grid-area: 1 / 5 / 4 / 6;
       background: url('./assets/images/originals/about-image.png');
-      background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
     }
     .btn {
       margin-top: 50px;

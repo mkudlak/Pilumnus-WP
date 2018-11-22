@@ -1,16 +1,13 @@
 
 .header {
   height: 100vh;
+  display: flex;
   text-align: center;
-  display: grid;
-  grid-template-columns: 0.5fr 2fr 0.5fr;
-  grid-template-rows: 0.5fr 2fr 0.5fr;
-  grid-template-areas: ". . ." ". header-border ." ". . .";
   .header-border {
-    grid-area: header-border;
+    width: 60%;
     margin: auto;
     border: 0.625rem solid $gold-dark;
-    padding: 5rem 15rem 6.25rem 15rem;
+    padding: 5rem 0 6.25rem 0;
     p {
       font-size: 1.5rem;
       font-weight: 700;
