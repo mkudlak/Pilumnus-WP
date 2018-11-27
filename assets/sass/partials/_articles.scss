@@ -1,12 +1,13 @@
 .articles {
   display: grid;
+  width: 100vw;
   grid-template-columns: 0.5fr 0.25fr 1.5fr 0.25fr 1.5fr 0.2fr 0.5fr;
   grid-template-rows: 0.25fr 2fr 0.25fr;
   grid-template-areas: ". art-title art-title art-title art-title art-title ."". articles-container articles-container articles-container articles-container articles-container ."". . . . . . .";
 
   .articles-container {
     display: grid;
-
+    width: 80vw;
     grid-template-columns: 0.1fr 338px 0.1fr 0.25fr 0.1fr 338px 0.1fr 0.25fr 0.1fr 338px 0.1fr;
     grid-template-rows: 0.1fr 236px 0.1fr 236px 0.1fr 0.1fr 236px 0.1fr;
     grid-gap: 5px;

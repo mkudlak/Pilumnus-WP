@@ -121,11 +121,12 @@ button {
 
 
 
+
 /*MEDIA QUERIES*/
 /* Small devices, phones less than 767px) */
 @media (max-width: 767px) {
     .padding-margin {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
 
     .header {
@@ -171,8 +172,7 @@ button {
             .art-image-2,
             .art-image-3 {
                 display: block;
-                height: 236px;
-                width: 280px;
+                height: auto;
                 margin: auto;
             }
 
@@ -181,40 +181,31 @@ button {
             }
         }
     }
-
     .gallery {
-        display: block;
-
-        .gallery-title {
-            margin: auto;
-            text-align: center;
-            margin-bottom: 40px;
-
-            .border-under {
-                margin: auto;
-            }
-        }
-
+        height: auto;
         .grid-container {
             display: block;
-            width: 100%;
-            height: 100%;
-
-            .img-1,
-            .img-2,
-            .img-3,
-            .img-4,
-            .img-5,
-            .img-6,
-            .img-7 {
-                height: 370px;
-                width: 442px;
-                margin: auto;
+            width: 80%;
+            height: auto;
+            margin: auto;
+            .img {
+                height: 349px;
             }
-
-            .img-1 {
-                margin: 0;
-                margin: auto;
+            .img-3 {
+                display: block;
+                height: 204px;
+                .img-small {
+                    align-self: none;
+                    background-size: cover;
+                    height: 204px;
+                }
+            }
+            .img-4 {
+                margin-top: 0;
+            }
+            .img-7 {
+                height: 204px;
+                background-size: cover;
             }
         }
     }
@@ -297,6 +288,11 @@ button {
             .art-info-1 {
                 margin-bottom: 50px
             }
+        }
+    }
+    .gallery {
+        .grid-container {
+            grid-gap: 15px;
         }
     }
 

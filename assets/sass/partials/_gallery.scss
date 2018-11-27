@@ -1,28 +1,44 @@
 .gallery {
+  height: 100vh;
+  width: 100vw;
+  margin-bottom: 100px;
   .gallery-title {
-    margin-left: 400px;
+    text-align: center;
+    margin-bottom: 50px;
+    .border-under {
+      margin: auto;
+    }
   }
-
   .grid-container {
     justify-content: center;
     margin: auto;
+    margin-bottom: 50px;
     display: grid;
-    grid-template-columns: 442px 370px 370px;
-    grid-template-rows: 349px 349px 349px;
-    grid-template-areas: "img-1 img-2 img-3""img-4 img-5 img-5""img-4 img-6 img-7";
+    height: 80vh;
+    width: 70vw;
+    grid-template-columns: 0.1fr repeat(3, 0.5fr) 0.1fr ;
+    grid-template-rows: 0.1fr 0.1fr repeat(3, 0.5fr) 0.1fr 0.1fr;
+    grid-template-areas:  " .     .       img-2   .       ."
+                          " .     img-1   img-2   img-3   . "
+                          " .     img-1   img-2   img-3   . "
+                          "img-4  img-4   img-5   img-5   img-5"
+                          "img-4  img-4   img-6   img-7   ."
+                          "img-4  img-4   img-6   .       ."
+                          ".      .       img-6   .       .";
     grid-gap: 30px;
   }
   .img {
     cursor: pointer;
+    background-repeat: no-repeat;
+    width:100%;
+    height: 100%;
+    box-shadow: none;
   }
   .img-1 {
-    margin-left: 72px;
-    margin-top: 70px;
     grid-area: img-1;
     background-image: url("./assets/images/originals/img-1.png");
     background-size: cover;
-    width: 370px;
-    height: 349px;
+    margin-top: 70px;
   }
 
   .img-2 {
@@ -33,47 +49,45 @@
 
   .img-3 {
     grid-area: img-3;
-    background-image: url("./assets/images/originals/img-3.png");
-    background-size: cover;
-    height: 204px;
-    align-self: end;
+    width:100%;
+    height: 100%;
+    display: grid;
+    .img-small {
+      background-image: url("./assets/images/originals/img-3.png");
+      background-size: cover;
+      height: 70%;
+      width: 100%;
+      align-self: end;
+    }
   }
 
   .img-4 {
-    margin-top: 70px;
     grid-area: img-4;
     background-image: url("./assets/images/originals/img-4.png");
     background-size: cover;
-    width: 442px;
-    height: 558px;
+    margin-top: 70px;
   }
 
   .img-5 {
     grid-area: img-5;
     background-image: url("./assets/images/originals/img-5.png");
     background-size: cover;
-    width: 853px;
-    height: 349px;
+    width:100%;
   }
 
   .img-6 {
     grid-area: img-6;
     background-image: url("./assets/images/originals/img-6.png");
     background-size: cover;
-    width: 370px;
-    height: 349px;
   }
 
   .img-7 {
     grid-area: img-7;
     background-image: url("./assets/images/originals/img-7.png");
-    background-size: cover;
-    width: 370px;
-    height: 204px;
+    background-size: contain;
   }
 
   .btn {
-    margin-top: 113px;
     display: block;
     margin: 0 auto;
   }

@@ -91,7 +91,9 @@ get_header();
     <div class="grid-container">
         <div class="img-1 img"></div>
         <div class="img-2 img"></div>
-        <div class="img-3 img"></div>
+        <div class="img-3 img">
+            <div class="img-small" style="align-self: end;"></div>
+        </div>
         <div class="img-4 img"></div>
         <div class="img-5 img"></div>
         <div class="img-6 img"></div>
