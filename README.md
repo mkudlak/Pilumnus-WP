@@ -4,7 +4,7 @@ This project was made on a base theme from underscore.me (http://http://undersco
 
 Final effect
 ---------------
-http://mkudlak.github.io/Project-1/
+http://demo01.mkudlak.com/
 
 More examples of my work
 ---------------
