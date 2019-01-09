@@ -4,8 +4,8 @@ This project was made on a base theme from underscore.me (http://http://undersco
 
 Final effect
 ---------------
-http://pilumnus.mkudlak.com
+http://pilumnus.mkudlak.com /Work in progress migrating hosting
 
 More examples of my work
 ---------------
-http://mkudlak.com
+http://mkudlak.com  /Work in progress migrating hosting
